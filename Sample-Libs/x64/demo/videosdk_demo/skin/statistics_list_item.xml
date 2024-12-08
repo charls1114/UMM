@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window >
+   <Font id="0" name="Microsoft YaHei" size="12" bold="false" underline="false" italic="false" default="true"/>
+   <ListContainerElement  height="40" >  	  
+		<HorizontalLayout> 
+			<!--Statistical Items-->
+			<Label name="label_statistical_items" textpadding="15,0,0,0" valign="left" height="40"  width="180" textcolor="#FF000000"/> 
+			<!--Send-->
+			<Label name="label_send" align="center" height="40" width="180" textcolor="#FF000000" /> 
+			<!--Receive-->
+			<Label name="label_receive" align="center" height="40" width="180" textcolor="#FF000000" /> 				
+		</HorizontalLayout>
+    </ListContainerElement>  
+</Window>

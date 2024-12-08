@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window  size="480,650" caption="0,0,0,30" shadow="file='shadow\Shadow.png' corner='40,40,40,40' size='18,18,18,18' resize='false' show='true'" >
+	<Font id="0" name="Microsoft YaHei" size="14" bold="false" underline="false" italic="false" default="true" />
+	<Font id="1" name="Microsoft YaHei" size="12" bold="false" underline="false" italic="false" />
+	<Font id="2" name="Microsoft YaHei" size="21" bold="false" underline="false" italic="false" />	
+	<TabLayout name="tablayout_main" selectedid="-1" topbordersize="1" bkcolor="#FFFFFFFF" bordercolor="#ff000000" padding="2,2,2,2" >
+		<VerticalLayout bkcolor="0xFF3B3C3C" >
+			<HorizontalLayout height="40">
+				<Button name="btn_settings" width="16" height="16" padding="10,10,0,0" normalimage="res='JOINSESSION_SETTINGS' restype='ZPIMGRES' "/>
+				<VerticalLayout />
+				<Button name="close" width="28" height="26" tooltip="close" padding="0,5,5,0" normalimage="res='BUTTON_CLOSE' restype='ZPIMGRES' source='0,0,28,26' " hotimage="res='BUTTON_CLOSE' restype='ZPIMGRES' source='0,26,28,52' " pushedimage="res='BUTTON_CLOSE' restype='ZPIMGRES' source='0,52,28,78' " disabledimage="res='BUTTON_CLOSE' restype='ZPIMGRES' source='0,78,28,104' "/>
+			</HorizontalLayout>
+			<TabLayout name="join_session_tablayout" selectedid="0">
+				<VerticalLayout name="init_layout" >
+					<VerticalLayout height="370">
+						<control />
+						<HorizontalLayout height="200">
+							<control />
+							<Label width="200" height="200" bkimage="res='MAIN_ICON' restype='ZPIMGRES'" />
+							<control />
+						</HorizontalLayout>
+						<control />
+					</VerticalLayout>
+					<HorizontalLayout height="105">
+						<control />
+						<VerticalLayout width="240" height="105" >
+							<Button name="btn_create_session" text="Create a Session" font="0" width="240" height="40" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="center" bordersize="1" borderround="2,2" normalimage="res='BUTTON_COMMON_BTN_NOR' restype='ZPIMGRES' corner='10,10,10,10' "/>
+							<Button name="btn_join_session" padding="0,25,0,0"  font="0" text="Join a Session" width="240" height="40" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="center" bordersize="1" borderround="2,2" normalimage="res='BUTTON_COMMON_BTN_NOR1' restype='ZPIMGRES' corner='10,10,10,10' "/>
+						</VerticalLayout>
+						<control />
+					</HorizontalLayout>
+				</VerticalLayout>
+				<HorizontalLayout name="join_create_a_session">
+					<control />
+					<VerticalLayout padding="0,50,0,40" width="340">
+						<Label padding="0,0,0,0" name="label_join_create_a_session" font="2" text="Join a Session" textcolor="#FFFFFFFF" height="30" />
+						<Label padding="0,50,0,0" text="Session Name" textcolor="#FFFFFFFF" font="0" height="30" />
+						<RichEdit padding="0,0,0,0" name="edit_session_name" font="0" tipvalue="Enter room name" tipvaluecolor="0xFF999999" textcolor="#FFF5F5F5" width="340" height="40" valign="vcenter" inset="20,10,20,0" multiline="false" wanttab="false" bkimage="res='EDIT_COMMON_NOR' restype='ZPIMGRES' corner='10,10,10,10' " />
+						<Label padding="0,0,0,0" name="label_session_error" font="1" visible="false" text="Fail to create or join a session. Check your parameters." textcolor="#FFD36363" height="30" />
+						<Label padding="0,10,0,0" text="Your Name" font="0" textcolor="#FFFFFFFF" height="30" />
+						<RichEdit padding="0,0,0,0" name="edit_your_name" font="0" tipvalue="Enter your name" tipvaluecolor="0xFF999999" textcolor="#FFF5F5F5" width="340" height="40" valign="vcenter" inset="20,10,20,0" multiline="false" wanttab="false" bkimage="res='EDIT_COMMON_NOR' restype='ZPIMGRES' corner='10,10,10,10' " />
+						<Label padding="0,0,0,0" name="label_your_name_error" font="1" visible="false" text="Your name can not be emptry." textcolor="#FFD36363" height="30" />
+						<Label padding="0,10,0,0" text="Password(Optional)" font="0" textcolor="#FFFFFFFF" height="30" />
+						<RichEdit padding="0,0,0,0" name="edit_password" password="true" font="0" tipvalue="Enter password" tipvaluecolor="0xFF999999" textcolor="#FFF5F5F5" width="340" valign="vcenter" height="40" inset="20,10,20,0" multiline="false"  wanttab="false" bkimage="res='EDIT_COMMON_NOR' restype='ZPIMGRES' corner='10,10,10,10' "/>
+						<Label padding="0,0,0,0" name="label_password_error" font="1" visible="false" text="Wrong password.Please enter again." textcolor="#FFD36363" height="30" />
+						<CheckBox name="chk_turn_off_video" text="Turn off my video" font="0" height="16" textcolor="FFF5F5F5" padding="0,25,0,0" align="left,singleline" valign="vcenter" textpadding="26,0,0,0" normalimage="res='CHECK_BOX_NOR' restype='ZPIMGRES' dest='0,0,16,16'" selectedimage="res='CHECK_BOX_SEL' restype='ZPIMGRES' dest='0,0,16,16'" noprefix="true"  focuspadding="22,10,0,10"/>
+						<CheckBox name="chk_mute_audio" text="Mute my audio" font="0" height="16" textcolor="FFF5F5F5" padding="0,15,0,0" align="left,singleline" valign="vcenter" textpadding="26,0,0,0" normalimage="res='CHECK_BOX_NOR' restype='ZPIMGRES' dest='0,0,16,16'" selectedimage="res='CHECK_BOX_SEL' restype='ZPIMGRES' dest='0,0,16,16'" noprefix="true"  focuspadding="22,10,0,10"/>
+						<control />
+						<HorizontalLayout height="40">
+							<Button name="btn_back" text="Back" font="0" width="70" height="40" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="center" bordersize="1" borderround="2,2" normalimage="res='BUTTON_COMMON_BTN_NOR' restype='ZPIMGRES' corner='10,10,10,10'"/>
+							<control />
+							<HorizontalLayout width="70" height="40" padding="20,0,0,0">
+								<Button name="btn_create" text="Create" font="0" visible="0" width="70" height="40"   textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="center" bordersize="1" borderround="2,2" normalimage="res='BUTTON_COMMON_BTN_NOR' restype='ZPIMGRES' corner='10,10,10,10' " />
+								<Button name="btn_join"   text="Join" font="0" visible="0" width="70" height="40"   textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="center" bordersize="1" borderround="2,2" normalimage="res='BUTTON_COMMON_BTN_NOR' restype='ZPIMGRES' corner='10,10,10,10' "/>
+							</HorizontalLayout>
+						</HorizontalLayout>
+					</VerticalLayout>
+					<control />
+				</HorizontalLayout>
+				<VerticalLayout name="error_layout">
+					<control />
+					<HorizontalLayout height="130" >
+						<VerticalLayout>
+							<HorizontalLayout>
+								<control />
+								<Label name="error_text" font="2" textcolor="#FFFFFFFF" align="center" width="410" multiline="true" height="60" />
+								<control />
+							</HorizontalLayout>
+							<HorizontalLayout>
+								<control />
+								<Button name="btn_error_ok" padding="0,20,0,0"  font="0" text="OK" width="80" height="40" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="center" bordersize="1" borderround="2,2" normalimage="res='BUTTON_COMMON_BTN_NOR' restype='ZPIMGRES' corner='10,10,10,10' "/>
+								<control />
+							</HorizontalLayout>
+						</VerticalLayout>
+					</HorizontalLayout>
+					<control />
+				</VerticalLayout>
+			</TabLayout>
+		</VerticalLayout>
+		<VerticalLayout>
+		</VerticalLayout>
+	
+	</TabLayout>
+</Window>

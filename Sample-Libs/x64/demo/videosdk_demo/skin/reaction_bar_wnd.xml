@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="248,84" roundcorner="2,2">
+	<Font id="0" name="Microsoft YaHei" size="13" bold="false" underline="false" italic="false" default="true" />
+	<VerticalLayout bkcolor="#FF131619">
+		<HorizontalLayout width="248">
+			<!--//clap thumbsup joy hushed heart tada raisehand lowerhand-->
+			<Button name="btn_emoji_clap" tag="1" userdata="clap" padding="8,8,0,0" width="32" height="32" normalimage="res='BUTTON_EMOJI_CLAP' restype='ZPIMGRES'" hotimage="res='BUTTON_EMOJI_CLAP_HOVER' restype='ZPIMGRES'" pushedimage="res='BUTTON_EMOJI_CLAP_CLICK' restype='ZPIMGRES'"/>
+			<Button name="btn_emoji_thumbsup" tag="2" userdata="thumbsup" padding="8,8,0,0" width="32" height="32" normalimage="res='BUTTON_EMOJI_THUMBSUP' restype='ZPIMGRES'" hotimage="res='BUTTON_EMOJI_THUMBSUP_HOVER' restype='ZPIMGRES'" pushedimage="res='BUTTON_EMOJI_THUMBSUP_CLICK' restype='ZPIMGRES'"/>
+			<Button name="btn_emoji_joy" tag="3" userdata="joy" padding="8,8,0,0" width="32" height="32" normalimage="res='BUTTON_EMOJI_JOY' restype='ZPIMGRES' " hotimage="res='BUTTON_EMOJI_JOY_HOVER' restype='ZPIMGRES'" pushedimage="res='BUTTON_EMOJI_JOY_CLICK' restype='ZPIMGRES'"/>
+			<Button name="btn_emoji_hushed" tag="4" userdata="hushed" padding="8,8,0,0" width="32" height="32" normalimage="res='BUTTON_EMOJI_HUSHED' restype='ZPIMGRES' " hotimage="res='BUTTON_EMOJI_HUSHED_HOVER' restype='ZPIMGRES'" pushedimage="res='BUTTON_EMOJI_HUSHED_CLICK' restype='ZPIMGRES'"/>
+			<Button name="btn_emoji_heart" tag="5" userdata="heart" padding="8,8,0,0" width="32" height="32" normalimage="res='BUTTON_EMOJI_HEART' restype='ZPIMGRES' " hotimage="res='BUTTON_EMOJI_HEART_HOVER' restype='ZPIMGRES'" pushedimage="res='BUTTON_EMOJI_HEART_CLICK' restype='ZPIMGRES'"/>
+			<Button name="btn_emoji_tada" tag="6" userdata="tada" padding="8,8,0,0" width="32" height="32" normalimage="res='BUTTON_EMOJI_TADA' restype='ZPIMGRES' " hotimage="res='BUTTON_EMOJI_TADA_HOVER' restype='ZPIMGRES'" pushedimage="res='BUTTON_EMOJI_TADA_CLICK' restype='ZPIMGRES'"/>
+		</HorizontalLayout>
+		<Button name="btn_raise_hand" tag="7" userdata="raisehand" borderround="4,4" padding="8,4,0,8" textpadding="25,0,0,0" bkcolor="#FF282B2E" textcolor="#FFFFFFFF" text="Raise Hand" font="0" height="32" width="232" foreimage="dest='67,8,83,24' res='BUTTON_EMOJI_RAISEDHAND' restype='ZPIMGRES'" />		
+	</VerticalLayout>
+</Window>

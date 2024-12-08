@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="180,70" roundcorner="4,4">
+	<Font id="0" name="Microsoft YaHei" size="13" bold="false" underline="false" italic="false" default="true" />
+	<VerticalLayout bkcolor="#FF242424">
+		<HorizontalLayout width="180">
+		<VerticalLayout padding="0,0,0,0" width="180" height="70">
+			<Button name="btn_request_or_stop_camera_control" align="left" textpadding="16,10,0,0" textcolor="#FFFFFFFF" text="Request Camera Control" font="0" height="32" width="180" visible="true"/>
+			<Button name="btn_remove" align="left" textcolor="#FFFFFFFF" text="Remove" font="0" height="32" width="180" visible="false" textpadding="16,0,0,0"/>
+		</VerticalLayout>
+		</HorizontalLayout>	
+	</VerticalLayout>
+</Window>

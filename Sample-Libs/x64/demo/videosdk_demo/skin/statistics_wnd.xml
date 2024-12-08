@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="580,400" caption="0,0,0,40">
+	<Font id="0" name="Microsoft YaHei" size="14" bold="false" underline="false" italic="false" default="true"/>
+	<VerticalLayout bkcolor="0xFF242424" >
+		<HorizontalLayout height="40">
+			<Label text="Statistics" font="0" padding="20,10,0,0" textcolor="#FFF5F5F5" />
+			<Button name="btn_close" font="0" padding="0,10,14,0" width="28" height="26" normalimage="res='BUTTON_CLOSE' restype='ZPIMGRES' source='0,0,28,26' " hotimage="res='BUTTON_CLOSE' restype='ZPIMGRES' source='0,26,28,52' " pushedimage="res='BUTTON_CLOSE' restype='ZPIMGRES' source='0,52,28,78' " disabledimage="res='BUTTON_CLOSE' restype='ZPIMGRES' source='0,78,28,104' "/>
+		</HorizontalLayout>
+		<HorizontalLayout padding="20,10,20,0" height="30" >
+			<Option text="Audio" name="option_audio" width="180" height="30" bkcolor="0xff242424" selected="true" bordercolor="0xFFFFFFFF" textcolor="0xFFFFFFFF" selectedtextcolor="0xFF3883E0" bordersize="1" group="aa"/>
+			<Option text="Video" name="option_video" width="180" height="30" bkcolor="0xff242424" bordercolor="0xFFFFFFFF" textcolor="0xFFFFFFFF" selectedtextcolor="0xFF3883E0" bordersize="1" group="aa"/>
+			<Option text="Share" name="option_share" width="180" height="30" bkcolor="0xff242424" bordercolor="0xFFFFFFFF" textcolor="0xFFFFFFFF" selectedtextcolor="0xFF3883E0" bordersize="1" group="aa"/>
+		</HorizontalLayout>
+		<HorizontalLayout bkcolor="#FFFFFFFF" padding="20,10,20,20" >
+			<List name="statistic_list" bkcolor="#FFFFFFFF" inset="0,0,0,0" itemshowhtml="true" vscrollbar="true" hscrollbar="true" headerbkimage="file='list_header_bg.png'" itemalign="center" itembkcolor="#FFE2DDDF" itemaltbk="true" menu="true">
+				<ListHeader height="24" menu="true">
+					<ListHeaderItem text="Statistics Items"  width="180" />
+					<ListHeaderItem text="Send"  width="180" />
+					<ListHeaderItem text="Receive"  width="180" />
+				</ListHeader>
+			</List>
+		</HorizontalLayout>
+	</VerticalLayout>
+</Window>

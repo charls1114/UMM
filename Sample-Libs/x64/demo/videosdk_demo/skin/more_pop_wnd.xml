@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="206,48" roundcorner="4,4">
+	<Font id="0" name="Microsoft YaHei" size="13" bold="false" underline="false" italic="false" default="true" />
+	<VerticalLayout bkcolor="#FF242424">
+		<HorizontalLayout width="206">
+			<Button name="btn_feedback" align="left" textpadding="16,16,0,0" textcolor="#FFFFFFFF" text="Feedback This Session" font="0" height="32" width="206" foreimage="dest='175,16,191,32' res='BUTTON_FEEDBACK_SMALL' restype='ZPIMGRES'" />			
+		</HorizontalLayout>		
+	</VerticalLayout>
+</Window>

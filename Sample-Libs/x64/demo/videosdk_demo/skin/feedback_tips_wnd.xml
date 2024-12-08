@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="283,108"  layeredimage="" layeredopacity="255">
+	<Font id="0" name="Microsoft YaHei" size="12" bold="false" underline="false" italic="false" default="true" />
+	<Font id="1" name="Microsoft YaHei" size="16" bold="true" underline="false" italic="false" />
+	<Font id="2" name="Microsoft YaHei" size="14" bold="false" underline="false" italic="false" />
+	<VerticalLayout>
+		<VerticalLayout bkimage="res='CHAT_EDIT_NOR_BK' restype='ZPIMGRES' corner='10,10,10,10'" height="100">
+			<HorizontalLayout height="24" padding="0,16,0,0">
+				<Button text="NEW" borderround="2,2" font="0" width="36" height="16" enabled="false" padding="16,4,0,0" textcolor="#FFFFFFFF" bkcolor="#FF0E72ED" align="center" normalimage="res='BUTTON_COMMON_BTN_NOR' restype='ZPIMGRES'"/>
+				<Label font="1" text="Push Feedback Survey" endellipsis="true" align="center" textcolor="#FFFFFFFF" height="24"/>
+				<Button name="btn_close" width="14" height="14" tooltip="close" textcolor="#FFFFFFFF" padding="0,5,21,0" text="Ⅹ"/>
+			</HorizontalLayout>
+			<Label  font="2" endellipsis="true" padding="16,4,0,0" align="left" text="Push a survey to all participants to" height="20" textcolor="#FFFFFFFF"/>
+			<Label  font="2" endellipsis="true" padding="16,2,0,0" align="left" text="get feedback" height="20" textcolor="#FFFFFFFF"/>
+		</VerticalLayout>
+		<Control width="20" height="8" padding="131,0,0,0" bkimage="res = 'POPUP_CORNER' restype = 'ZPIMGRES'"/>
+	</VerticalLayout>
+</Window>

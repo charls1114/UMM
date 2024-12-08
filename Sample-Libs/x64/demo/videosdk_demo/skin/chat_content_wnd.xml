@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window  size="400,185" layeredimage="" >
+	<!--[code:bananackck] size 값 18(폰트 크기)-->
+	<Font id="0" name="Microsoft YaHei" size="18" bold="false" underline="false" italic="false" />
+	<!--[code:bananackck] fade 값 64(배경 투명도)-->
+	<HorizontalLayout bkimage="res='CHAT_EDIT_NOR_BK' restype='ZPIMGRES' corner='10,10,10,10' mask='#FF0000' fade='64' ">	
+		<RichEdit name="view_richedit" textpadding="10,10,10,0" multiline="true" font="0" vscrollbar="true" autovscroll="true" rich="true" readonly="true"/>
+	</HorizontalLayout>
+</Window>

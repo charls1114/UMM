@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="400,472" caption="0,0,0,30">
+	<Font id="0" name="Microsoft YaHei" size="20" bold="false" underline="false" italic="false"/>
+	<Font id="1" name="Microsoft YaHei" size="24" bold="false" underline="false" italic="false"/>
+	<Font id="2" name="Microsoft YaHei" size="14" bold="false" underline="false" italic="false"/>
+	<Font id="3" name="Microsoft YaHei" size="13" bold="false" underline="false" italic="false"/>
+	<VerticalLayout bkcolor="#FF131619">
+		<HorizontalLayout height="48">
+			<Label text="Feedbacks" font="0" textcolor="#FFF7F9FA" width="218" height="28" padding="24,28,0,0"/>
+			<Label name="lable_responses" text="0 responses" font="3" textcolor="#FF98A0A9" align="right" height="20" padding="24,30,24,0"/>
+		</HorizontalLayout>
+
+		<Label text="How do you like our session?" font="1" textcolor="#FFFFFFFF" height="32" padding="24,10,0,0"/>
+
+		<VerticalLayout name="launch_layout" padding="24,16,0,0">
+			<VerticalLayout name="launch_layout_main" selectedid="0" childpadding="8" vscrollbar="true" height="286">
+				
+				<HorizontalLayout bkcolor="#FF252A30" height="62" width="352" userdata="verySatisfied">
+					<Label height="32" width="32" padding="15,15,0,15" bkimage="res='FEEDBACK_HIGHLY_SATISFIED' restype='ZPIMGRES'"/>
+					<VerticalLayout width="280" padding="10,0,0,0">
+						<HorizontalLayout height="24" >
+							<Label text="Very Satisfied" font="2" textcolor="#FFF7F9FA" width="114" height="24" padding="12,8,0,0"/>
+							<Control />
+							<Label name="vote_item_percent" text="0%" align="right" font="3" textcolor="#FF98A0A9" width="36" height="16" padding="0,8,0,0"/>
+						</HorizontalLayout>
+						<Progress name="vote_progress" valign="vcenter" height="6" padding="12,6,0,0" width="280" bkimage="res='PROGRESS_BK' restype='ZPIMGRES'" foreimage="res='PROGRESS_FORE' restype='ZPIMGRES'" value="0" min="0" max="1"/>
+						<Label name="vote_num" text="0 responses" font="3" textcolor="#FF98A0A9" height="16" padding="12,2,0,0"/>
+					</VerticalLayout>
+				</HorizontalLayout>
+
+				<HorizontalLayout bkcolor="#FF252A30" height="62" width="352" userdata="satisfied">
+					<Label height="32" width="32" padding="15,15,0,15" bkimage="res='FEEDBACK_SATISFIED' restype='ZPIMGRES'"/>
+					<VerticalLayout width="280" padding="10,0,0,0">
+						<HorizontalLayout height="24" width="352">
+							<Label text="Satisfied" font="2" textcolor="#FFF7F9FA" width="114" height="24" padding="12,8,0,0"/>
+							<Control />
+							<Label name="vote_item_percent" text="0%" align="right" font="3" textcolor="#FF98A0A9" width="36" height="16" padding="0,8,0,0"/>
+						</HorizontalLayout>
+						<Progress name="vote_progress" valign="vcenter" height="6" padding="12,6,0,0" width="328" bkimage="res='PROGRESS_BK' restype='ZPIMGRES'" foreimage="res='PROGRESS_FORE' restype='ZPIMGRES'" value="0" min="0" max="1"/>
+						<Label name="vote_num" text="0 responses" font="3" textcolor="#FF98A0A9" height="16" padding="12,2,0,0"/>
+					</VerticalLayout>
+				</HorizontalLayout>
+
+				<HorizontalLayout bkcolor="#FF252A30" height="62" width="352" userdata="neutral">
+					<Label height="32" width="32" padding="15,15,0,15" bkimage="res='FEEDBACK_NEUTRAL' restype='ZPIMGRES'"/>
+					<VerticalLayout width="280" padding="10,0,0,0">
+						<HorizontalLayout height="24" width="352">
+							<Label text="Neutral" font="2" textcolor="#FFF7F9FA" width="114" height="24" padding="12,8,0,0"/>
+							<Control />
+							<Label name="vote_item_percent" text="0%" align="right" font="3" textcolor="#FF98A0A9" width="36" height="16" padding="0,8,0,0"/>
+						</HorizontalLayout>
+						<Progress name="vote_progress" valign="vcenter" height="6" padding="12,6,0,0" width="328" bkimage="res='PROGRESS_BK' restype='ZPIMGRES'" foreimage="res='PROGRESS_FORE' restype='ZPIMGRES'" value="0" min="0" max="1"/>
+						<Label name="vote_num" text="0 responses" font="3" textcolor="#FF98A0A9" height="16" padding="12,2,0,0"/>
+					</VerticalLayout>
+				</HorizontalLayout>
+
+				<HorizontalLayout bkcolor="#FF252A30" height="62" width="352" userdata="unsatisfied">
+					<Label height="32" width="32" padding="15,15,0,15" bkimage="res='FEEDBACK_DISSATISFIED' restype='ZPIMGRES'"/>
+					<VerticalLayout width="280" padding="10,0,0,0">
+						<HorizontalLayout height="24" width="352">
+							<Label text="Dissatisfied" font="2" textcolor="#FFF7F9FA" width="114" height="24" padding="12,8,0,0"/>
+							<Control />
+							<Label name="vote_item_percent" text="0%" align="right" font="3" textcolor="#FF98A0A9" width="36" height="16" padding="0,8,0,0"/>
+						</HorizontalLayout>
+						<Progress name="vote_progress" valign="vcenter" height="6" padding="12,6,0,0" width="328" bkimage="res='PROGRESS_BK' restype='ZPIMGRES'" foreimage="res='PROGRESS_FORE' restype='ZPIMGRES'" value="0" min="0" max="1"/>
+						<Label name="vote_num" text="0 responses" font="3" textcolor="#FF98A0A9" height="16" padding="12,2,0,0"/>
+					</VerticalLayout>
+				</HorizontalLayout>
+
+				<HorizontalLayout bkcolor="#FF252A30" height="62" width="352" userdata="veryUnsatisfied">
+					<Label height="32" width="32" padding="15,15,0,15" bkimage="res='FEEDBACK_VERY_DISSATISFIED' restype='ZPIMGRES'"/>
+					<VerticalLayout width="280" padding="10,0,0,0">
+						<HorizontalLayout height="24" width="352">
+							<Label text="Very Dissatisfied" font="2" textcolor="#FFF7F9FA" width="120" height="24" padding="12,8,0,0"/>
+							<Control />
+							<Label name="vote_item_percent" text="0%" align="right" font="3" textcolor="#FF98A0A9" width="36" height="16" padding="0,8,0,0"/>
+						</HorizontalLayout>
+						<Progress name="vote_progress" valign="vcenter" height="6" padding="12,6,0,0" width="328" bkimage="res='PROGRESS_BK' restype='ZPIMGRES'" foreimage="res='PROGRESS_FORE' restype='ZPIMGRES'" value="0" min="0" max="1"/>
+						<Label name="vote_num" text="0 responses" font="3" textcolor="#FF98A0A9" height="16" padding="12,2,0,0"/>
+					</VerticalLayout>
+				</HorizontalLayout>
+			</VerticalLayout>
+
+			<Control />
+			<HorizontalLayout height="80">
+				<HorizontalLayout height="32" padding="0,24,0,0">
+					<Button name="btn_feedback_launch" text="Push Feedback Survey" tooltip="Push feedback survey to everyone in the session" font="2" width="186" height="32" textcolor="#FF4793F1" align="left" />
+					<HorizontalLayout name="pushed_layout" height="32" visible="false">
+						<Label width="14" height="14" bkimage="res='FINISH_DOWN' restype='ZPIMGRES'" padding="0,3,0,0"/>
+						<Label text="Pushed!" font="2" padding="7,0,0,0" width="60" height="20" textcolor="#FFF7F9FA" align="left" />
+					</HorizontalLayout>
+					<Control />
+					<Button name="btn_feedback_close" text="Close" font="2" width="71" height="32" textcolor="#FFFFFFFF" align="center" normalimage="res='BUTTON_COMMON_BTN_NOR' restype='ZPIMGRES' corner='10,10,10,10'" />
+					<Control width="24"/>
+				</HorizontalLayout>
+			</HorizontalLayout>
+		</VerticalLayout>
+
+	</VerticalLayout>
+
+</Window>

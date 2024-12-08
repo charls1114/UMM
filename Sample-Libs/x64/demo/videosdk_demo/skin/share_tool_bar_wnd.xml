@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="246,42" >
+	<Font id="0" name="Microsoft YaHei" size="10" bold="false" underline="false" italic="false" default="true"/>
+	<HorizontalLayout bkcolor="#FF161717">
+		<VerticalLayout padding="20,9,0,9" width="24" height="24">
+			<Button name="btn_muted_audio" width="24" height="24" visible="false" normalimage="res='BUTTON_SHARE_MUTED_AUDIO' restype='ZPIMGRES'"/>
+			<Button name="btn_unmuted_audio" width="24" height="24" visible="false" normalimage="res='BUTTON_SHARE_UNMUTED_AUDIO' restype='ZPIMGRES'"/>
+		</VerticalLayout>
+		<VerticalLayout padding="10,9,0,9" width="24" height="24">
+			<Button name="btn_muted_video" width="24" height="24" visible="false" normalimage="res='BUTTON_SHARE_MUTED_VIDEO' restype='ZPIMGRES'"/>
+			<Button name="btn_unmuted_video" width="24" height="24" visible="false" normalimage="res='BUTTON_SHARE_UNMUTED_VIDEO' restype='ZPIMGRES'"/>
+		</VerticalLayout>
+		<VerticalLayout  padding="10,5,0,9" width="24" height="28"> 
+			<control />
+			<Button name="btn_participant" width="24" height="18" normalimage="res='BUTTON_SHARE_PARTICIPANT' restype='ZPIMGRES'"/>
+			<label name="label_participant_num" textcolor="0xFFA6A7A7" visible="true" float="true" pos="2,0,22,10" align="right" />
+		</VerticalLayout>
+		<Button name="btn_stop_share" padding="10,5,20,5" width="104" height="32" normalimage="res='BUTTON_STOP_SHARE' restype='ZPIMGRES' "/>
+	</HorizontalLayout>
+</Window>

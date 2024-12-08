@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window>
+  <!-- 默认字体 -->
+  <Font id="0" name="宋体" size="12" bold="false" default="true" />
+  <!-- 大标题字体 -->
+  <Font id="1" name="宋体" size="16" bold="false"/>
+  <!-- 小标题字体 -->
+  <Font name="宋体" size="13" bold="true"/>
+  <!-- 复选框字体 -->
+  <Font name="宋体" size="12" bold="false"/>
+  <!-- 下划线字体-->
+  <Font name="宋体" size="12" bold="false" underline="true"/>
+  <Font name="宋体" size="14" bold="false" />
+  <Font name="宋体" size="16" bold="true" />
+  <Font name="宋体" size="18" bold="false" />
+  <Font name="宋体" size="36" bold="false" />
+  <Font name="宋体" size="10" bold="false" />
+  <Font name="宋体" size="20" bold="false"/>
+  <!-- 下划线字体-->
+  <Font name="宋体" size="20" bold="false" underline="true"/>
+  <Font name="宋体" size="12" bold="true"/>
+  <Font name="宋体" size="13" bold="false"/>
+  <Font name="宋体" size="14" bold="true" />
+  <Font name="宋体" size="22" bold="false"/>
+</Window>
