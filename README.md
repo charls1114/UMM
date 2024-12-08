@@ -1,6 +1,7 @@
 # Zoom Windows Video SDK
 
 Install python libraries in the project/.venv directory.
+open command prompt and run command below.
 python -m pip install -r requirements.txt
 
 ## Documentation
