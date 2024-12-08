@@ -1,5 +1,8 @@
 # Zoom Windows Video SDK
 
+Install python libraries in the project/.venv directory.
+python -m pip install -r requirements.txt
+
 ## Documentation
 Please visit [Zoom Windows Video SDK](https://developers.zoom.us/docs/video-sdk/windows/) to learn how to use the SDK and run the sample application.
 

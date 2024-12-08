@@ -2,6 +2,8 @@
 site-packages
 __pycache__
 /Sample-Libs/x64/bin/objs
+/Sample-Libs/x64/project/.venv/Scripts/*
+/Sample-Libs/x64/project/.venv/share
 /Sample-Libs/x64/project/mt-translation-442906-0c907126a398.json
 *.exe
 *.pdb
