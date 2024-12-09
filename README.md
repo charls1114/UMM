@@ -1,4 +1,4 @@
-# Sogang University Capstone Design project using Zoom Windows Video SDK
+# Sogang University Capstone Design project using Zoom Windows Video SDK and faster whisper
 
 # requirements
 Install python libraries in the project/.venv directory.
