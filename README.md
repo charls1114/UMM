@@ -2,9 +2,10 @@
 
 # requirements
 you must download this project with git clone. (because of file format difference.)
+
 Install python libraries in the project/.venv directory.
 
-open command prompt and run command below.
+To install python libraries, open command prompt and run command below.
 
 python -m pip install -r requirements.txt
 
