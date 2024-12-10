@@ -10,6 +10,9 @@ from google.cloud import translate_v2 as translate
 
 # real-time streaming stt - mt code
 
+
+lan = input("input language(ko, en):")
+
 # 온디바이스 STT 모델 로드
 model_size = "tiny"
 print("start transcribing with model:", model_size)
@@ -23,9 +26,9 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = json_filename
 translate_client = translate.Client()
 
 # 영어 -> 한국어 번역 함수
-# def translate_en_to_ko(text):
-#     result = translate_client.translate(text, target_language='ko')
-#     return result['translatedText']
+def translate_en_to_ko(text):
+    result = translate_client.translate(text, target_language='ko')
+    return result['translatedText']
 
 # 한국어 -> 영어 번역 함수
 def translate_ko_to_en(text):
@@ -57,9 +60,9 @@ def is_seg_valid(seg):
     # print(seg, dir(seg))
     return seg.no_speech_prob < 0.6 and seg.compression_ratio < 10
 
-def stt_mt_sequence(audio_data, hPipe):
+def stt_mt_sequence(audio_data, hPipe, language):
     start_time = time.time()  # 시작 시간 기록
-    result = stt(audio_data, "ko")
+    result = stt(audio_data, lan = language)
 
     segs = list(filter(is_seg_valid, result))
     end_time = time.time()  # 끝 시간 기록
@@ -72,7 +75,10 @@ def stt_mt_sequence(audio_data, hPipe):
     text = "STT 결과:"
     for seg in segs:
         text += seg.text + " "
-    translated_text_en, _ = measure_translation_time(translate_ko_to_en, text)
+    if (lan == "ko"):
+        translated_text_en, _ = measure_translation_time(translate_ko_to_en, text)
+    if (lan == "en"):
+        translated_text_en, _ = measure_translation_time(translate_en_to_ko, text)
     text += '\n' + "문장 한국어 -> 영어 번역 결과:" + translated_text_en + '\0'
     print(text)
     win32file.WriteFile(hPipe, text.encode())
@@ -126,7 +132,7 @@ try:
             chunk = q.get().squeeze()
             audio_data.extend(chunk)
             if count == 50:
-                stt_mt_sequence(audio_data, hPipe)
+                stt_mt_sequence(audio_data, hPipe, lan)
                 audio_data = []
                 count = 0
             count += 1
