@@ -2344,8 +2344,7 @@ void CMainFrame::stt_mt_piping()
 						// zchar_t* 포인터로 사용 (즉, wchar_t*)
 						const zchar_t* stt_text = wstr.c_str();
 						OutputDebugString(stt_text);
-						UpdateChatContentWndPos(true);
-						InsertContentToChatContentWnd(username.c_str(), stt_text);
+						ZoomVideoSDKMgr::GetInst().GetVideoSdkObjInst()->getChatHelper()->sendChatToAll(stt_text);
 					} while (!fSuccess); // repeat loop if ERROR_MORE_DATA
 
 				}while (run_read_pipe);
