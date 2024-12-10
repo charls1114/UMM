@@ -69,9 +69,6 @@ class ZoomVideoSDKMgr
 {
 public:
 	static ZoomVideoSDKMgr& GetInst();
-	IZoomVideoSDK* GetVideoSdkObjInst() {
-		return video_sdk_obj_;
-	}
 	~ZoomVideoSDKMgr();
 
 	bool Init(IZoomVideoSDKDelegate* listener, ZoomVideoSDKInitParams init_params);
