@@ -276,6 +276,19 @@ ZoomVideoSDKErrors ZoomVideoSDKMgr::SendChatToAll(const zchar_t* msgContent)
 	return ZoomVideoSDKErrors_Uninitialize;
 }
 
+ZoomVideoSDKErrors ZoomVideoSDKMgr::SendChatToUser(IZoomVideoSDKUser* username, const zchar_t* msgContent)
+{
+	if (video_sdk_obj_)
+	{
+		IZoomVideoSDKChatHelper* chat_helper = video_sdk_obj_->getChatHelper();
+		if (chat_helper)
+		{
+			return chat_helper->sendChatToUser(username, msgContent);
+		}
+	}
+	return ZoomVideoSDKErrors_Uninitialize;
+}
+
 const zchar_t* ZoomVideoSDKMgr::GetSessionName() const
 {
 	if (video_sdk_obj_)

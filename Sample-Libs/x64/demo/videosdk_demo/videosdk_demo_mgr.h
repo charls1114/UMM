@@ -109,6 +109,7 @@ public:
 	
 	ZoomVideoSDKErrors SendCommand(IZoomVideoSDKUser* receiver, const zchar_t* strCmd);
 	ZoomVideoSDKErrors SendChatToAll(const zchar_t* msgContent);
+	ZoomVideoSDKErrors SendChatToUser(IZoomVideoSDKUser* username, const zchar_t* msgContent);
 
 	const zchar_t* GetSessionName() const;
 	int GetUserCountInSession();
