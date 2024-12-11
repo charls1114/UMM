@@ -1,4 +1,4 @@
-// line 50 수정
+// line 47~, 75~ 수정
 
 #pragma once
 
