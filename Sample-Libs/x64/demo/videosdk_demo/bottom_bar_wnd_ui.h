@@ -47,6 +47,9 @@ private:
 	void DoCloseChatBtnClick();
 	void DoOpenChatBtnClick();
 
+	void DoKoBtnClick();
+	void DoEnBtnClick();
+
 private:
 	void InitControls();
 	void ShowErrorTipDlg(IZoomVideoSDKUser* user);
@@ -71,4 +74,7 @@ private:
 
 	CButtonUI* chat_open_ = nullptr;
 	CButtonUI* chat_close_ = nullptr;
+
+	CButtonUI* lan_ko_ = nullptr;
+	CButtonUI* lan_en_ = nullptr;
 };
