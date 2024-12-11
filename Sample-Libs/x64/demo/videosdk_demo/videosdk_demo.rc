@@ -176,11 +176,13 @@ CHAT_USER_ICON                  ZPIMGRES                "skin/button/chat_user.p
 CHAT_SEND                       ZPIMGRES                "skin/button/chat_send.png"
 
 /////////////////////////////
-//	close chat 이미지 주소 저장
-//  아래 코드 한 줄 삽입
+//	이미지 주소 저장
+//  아래 코드 네 줄 삽입
 /////////////////////////////
 CHAT_CLOSE                      ZPIMGRES                "skin/button/chat_close.png"
 CHAT_OPEN                       ZPIMGRES                "skin/button/chat_open.png"
+LAN_KO                          ZPIMGRES                "skin/button/lan_ko.png"
+LAN_EN                          ZPIMGRES                "skin/button/lan_en.png"
 
 MAIN_ICON                       ZPIMGRES                "skin/common/main_icon.png"
 
