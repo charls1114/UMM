@@ -43,6 +43,10 @@
 				<label name="label_feedback_num" text="0" textcolor="0xFF457896" bkimage="res='NUMBER_BKIMAGE_BLACK' restype='ZPIMGRES'" visible="true" float="true" pos="33,0,49,16" borderround="8,8" align="center" />				
 			</VerticalLayout>
 
+			<!--
+				번역 대상 언어 선택 버튼 생성 (한/영)
+				아래 Layout삽입
+			-->
 			<VerticalLayout name="language" width="48" height="48" padding="10,0,0,0">
 				<!-- 한/영 전환 버튼 생성  -->
 				<Button name="btn_korean" width="48" height="48" visible="true" normalimage="res='LAN_KO' restype='ZPIMGRES' "/>
