@@ -106,6 +106,14 @@ void CBottomBarWndUI::Notify(TNotifyUI& msg)
 		{
 			DoOpenChatBtnClick();
 		}
+		else if (msg.pSender->GetName() == _T("btn_korean"))
+		{
+			DoKoBtnClick();
+		}
+		else if (msg.pSender->GetName() == _T("btn_english"))
+		{
+			DoEnBtnClick();
+		}
 		////////////////////////////////////////////////////////
 		else if (msg.pSender->GetName() == _T("btn_feedback"))
 		{
@@ -165,6 +173,9 @@ void CBottomBarWndUI::InitControls()
 
 	chat_open_ = static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("btn_chat_open")));
 	chat_close_ = static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("btn_chat_close")));
+	
+	lan_ko_ = static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("btn_korean")));
+	lan_en_ = static_cast<CButtonUI*>(m_PaintManager.FindControl(_T("btn_english")));
 }
 
 void CBottomBarWndUI::OnSessionJoin()
@@ -362,8 +373,9 @@ void CBottomBarWndUI::DoSendChatBtnClick()
 }
 
 /*
-	close chat 버튼을 누르면 chat content window 제거 함수 호출	
-	아래 함수 삽입
+	chat window on/off
+ 	translate language choice
+	아래 함수 네 개 삽입
 */
 void CBottomBarWndUI::DoCloseChatBtnClick()
 {
@@ -376,4 +388,14 @@ void CBottomBarWndUI::DoOpenChatBtnClick(){
 	CMainFrame::GetInstance().ShowChatContentWnd(true);
 	chat_open_->SetVisible(false);
 	chat_close_->SetVisible(true);
+}
+
+void CBottomBarWndUI::DoKoBtnClick(){
+	lan_ko_->SetVisible(false);
+	lan_en_->SetVisible(true);
+}
+
+void CBottomBarWndUI::DoEnBtnClick(){
+	lan_en_->SetVisible(false);
+	lan_ko_->SetVisible(true);
 }
