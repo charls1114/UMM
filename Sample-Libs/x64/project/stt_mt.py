@@ -36,7 +36,7 @@ def measure_translation_time(translate_function, text):
     translated_text = translate_function(text)
     end_time = time.time()  # 끝 시간 기록
     translation_time = end_time - start_time  # 번역에 걸린 시간 계산
-    return translated_text
+    return translated_text, translation_time
 
 # STT 과정 캡슐화
 def stt(data_list, lan):
@@ -58,7 +58,6 @@ def is_seg_valid(seg):
 def stt_mt_sequence(audio_data, hPipe, language):
     start_time = time.time()  # 시작 시간 기록
     result = stt(audio_data, lan = language)
-
     segs = list(filter(is_seg_valid, result))
     end_time = time.time()  # 끝 시간 기록
     transcribe_time = end_time - start_time  # 전사에 걸린 시간 계산
@@ -71,12 +70,16 @@ def stt_mt_sequence(audio_data, hPipe, language):
     for seg in segs:
         text += seg.text + " "
     if (lan == "ko"):
-        translated_text_ko = measure_translation_time(translate_ko_to_en, text)
-        text += '\n' + "문장 한국어 -> 영어 번역 결과:" + translated_text_ko + '\0'
+        translated_text_ko,transl_time= measure_translation_time(translate_ko_to_en, text)
+        text += '\n' + "문장 한국어 -> 영어 번역 결과: " + translated_text_ko +'\0'
+        print( "번역 시간: "+ str(transl_time) + "s ")
+        #print("총 걸린 시간: " , transcribe_time+transl_time)
     if (lan == "en"):
-        translated_text_en = measure_translation_time(translate_en_to_ko, text)
-        text += '\n' + "문장 한국어 -> 영어 번역 결과:" + translated_text_en + '\0'
-    
+        translated_text_en,transl_time = measure_translation_time(translate_en_to_ko, text)
+        text += '\n' + "문장 한국어 -> 영어 번역 결과: " + translated_text_en +'\0'
+        print( "번역 시간: "+ str(transl_time) + "s ")
+        #print("총 걸린 시간: " , transcribe_time+transl_time)
+
     print(text)
     win32file.WriteFile(hPipe, text.encode())
     win32file.FlushFileBuffers(hPipe)
@@ -92,7 +95,7 @@ if __name__ == "__main__":
     #NLLB-200 모델 로드
     lan = input("input language(ko, en):")
     os.environ["HF_HOME"] = "~/.huggingface"
-    os.environ["HF_TOKEN"] = "---"
+    os.environ["HF_TOKEN"] = "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"
     login(token=os.environ["HF_TOKEN"])    
     transpipe_en_to_ko = pipeline(
         'translation',
@@ -100,7 +103,7 @@ if __name__ == "__main__":
         device=-1,  
         src_lang='eng_Latn',
         tgt_lang='kor_Hang',
-        max_length=512
+        max_length=1024
     )
     transpipe_ko_to_en = pipeline(
         'translation',
@@ -108,7 +111,7 @@ if __name__ == "__main__":
         device=-1,  
         src_lang='kor_Hang',
         tgt_lang='eng_Latn',
-        max_length=512
+        max_length=1024
     )
         # pipe information.
     pipeName = r"\\.\pipe\module_piping"
