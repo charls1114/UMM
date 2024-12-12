@@ -95,7 +95,7 @@ if __name__ == "__main__":
     #NLLB-200 모델 로드
     lan = input("input language(ko, en):")
     os.environ["HF_HOME"] = "~/.huggingface"
-    os.environ["HF_TOKEN"] = "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"
+    os.environ["HF_TOKEN"] = "---"
     login(token=os.environ["HF_TOKEN"])    
     transpipe_en_to_ko = pipeline(
         'translation',
